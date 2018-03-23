@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inheritance Test</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <script type="module" src="./modalBase/modalTest1/modalTest1.mjs"></script>
+    <script>
+      function makeModal() {
+        document.querySelector('.putStuffHere').appendChild(document.createElement('modal-test-1'));
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="makeModal()">Modal</button>
+    <section class="putStuffHere"></section>
+  </body>
+</html>
