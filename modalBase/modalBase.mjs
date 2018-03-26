@@ -11,7 +11,6 @@ const buttonTypes = {
 
 export default class ModalBase extends HTMLElement {
   constructor(headerText = 'replace me!', buttons = null, height = 500, width = 700) {
-    super();
     this._buttons = buttons ?
                     buttons.split('|').map(button => ({type: button, text: buttonTypes[button]})) :
                     null;
@@ -21,6 +20,7 @@ export default class ModalBase extends HTMLElement {
     this._styles = null;
     this._template = null;
     this._width = width;
+    super();
   }
 
   disconnectedCallback() {
